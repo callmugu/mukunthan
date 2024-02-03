@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      background-color: #0e0606;
+      margin: 0;
+    }
+
+    .heart {
+      position: relative;
+      width: 100px;
+      height: 90px;
+      background-color: #e73c3c;
+      transform: rotate(-45deg);
+      animation: beat 1s infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 90px;
+      background-color: #e73c3c;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -45px;
+      left: 0;
+    }
+
+    .heart::after {
+      top: 0;
+      left: 45px;
+    }
+
+    @keyframes beat {
+      0%, 100% {
+        transform: scale(1) rotate(-45deg);
+      }
+      50% {
+        transform: scale(1.1) rotate(-45deg);
+      }
+    }
+    .M-letter {
+      margin-bottom: 30vh;
+      font-family: 'Arial', sans-serif;
+      font-size: 6em;
+      position: fixed;
+      left: 10px;
+      display: inline-block;
+      color: #dd1616; 
+      text-shadow: 2px 2px 4px rgba(60, 197, 231, 0.8);
+    }
+    .j-letter {
+      margin-top: 20vh;
+      font-family: 'Arial', sans-serif;
+      font-size: 6em;
+      position: fixed;
+      right: 70px;
+      display: inline-block;
+      color: #db3442; 
+      text-shadow: 2px 2px 4px rgba(60, 197, 231, 0.8); 
+    }
+  
+  
+  </style>
+</head>
+<body>
+  <img src="web/image/f" alt="" class="image_rose">
+  <div class="heart"></div>
+  <div class="M-letter">𝓜..</div>
+  <div class="j-letter">..𝓙</div>
+</body>
+</html>
